@@ -27,7 +27,7 @@ git clone https://github.com/Rahul24-06/Computer-pointer-Controller-using-Gaze-E
 - Initialize the OpenVINO environment 
 
 ```
-cd <Project-Repo-Path>\IntelSWTools\openvino\bin\
+cd <OppenVINO-Path>\IntelSWTools\openvino\bin\
 setupvars.bat
 ```
 
@@ -48,7 +48,7 @@ I've made a step by step instruction walkthrough to install Intel® Distribution
 - Go to the *Model Downloader* directory: 
 
 ```
-cd <Project-Repo-Path>\IntelSWTools\openvino\deployment_tools\tools\model_downloader
+cd <OpenVINO-Path>\IntelSWTools\openvino\deployment_tools\tools\model_downloader
 ```
 
 **1. Download Face Detection Model**
@@ -77,7 +77,7 @@ python downloader.py --name gaze-estimation-adas-0002
 
 ![Model Downloader](./images/model-download.png)
 
-- Copy the downloaded models to the Project directory. (Note that I've downloaded models wih FP16 precision)
+- Copy the downloaded models to the Project directory **<Project-Repo-Path>\model**. (Note that I've downloaded models wih FP32, FP16, & INT8 precision)
 
 ###  Project Directory Structure
 
@@ -102,8 +102,31 @@ This shows the directory structure of the project. The project directory contain
   * mouse_controller.py - Contains sample class that you can use to control the mouse pointer.
   * main.py - Integrates all the modules to run this project.
   
-## Demo
-*TODO:* Explain how to run a basic demo of your model.
+## Demo 
+
+1. Initialize the OpenVINO environment 
+
+```
+cd <OppenVINO-Path>\IntelSWTools\openvino\bin\
+setupvars.bat
+```
+
+2. Open a new terminal and run the following commands:
+
+```
+cd <Project-Repo-Path>\src
+```
+3. Run the main.py 
+
+```
+python main.py 
+-f "Path to an .xml file with Face Detection model>"
+-fl "Path to an .xml file with Facial Landmark Detection model"
+-hp "Path to an .xml file with Head Pose Estimation model".
+-g "Path to an .xml file with Gaze Estimation model"
+-i "Path to image or video file or CAM"
+-d "Target device"
+```
 
 ## Documentation
 
@@ -124,6 +147,15 @@ While building the flow, you will need to make sure that you are aware of the in
 * [Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
 
 ### Command line arguments
+
+The *main.py* file is fed with the following arguments in the command line inference, where 
+
+* -f "Path to an .xml file with Face Detection model>"
+* -fl "Path to an .xml file with Facial Landmark Detection model"
+* -hp "Path to an .xml file with Head Pose Estimation model".
+* -g "Path to an .xml file with Gaze Estimation model"
+* -i "Path to image or video file or CAM"
+* -d "Target device"
 
 --------------------------------------------------------------------------------------------------------
 
