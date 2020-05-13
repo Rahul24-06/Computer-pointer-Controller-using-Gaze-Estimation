@@ -111,7 +111,20 @@ This shows the directory structure of the project. The project directory contain
 --------------------------------------------------------------------------------------------------------
 
 ## Benchmarks
-*TODO:* Include the benchmark results of running your model on multiple hardwares and multiple model precisions. Your benchmarks can include: model loading time, input/output processing time, model inference time etc.
+
+The benchmark results of running your model on multiple hardwares and multiple model precisions. This include model loading time, input/output processing time, model inference time which are compared as follows: 
+
+### FP16
+
+![Benchmark results of FP16 Model](media/fp16_benchmark.png "Benchmark results of FP16 Model")
+
+### FP32
+
+![Benchmark results of FP32 Model](media/fp32_benchmark.png "Benchmark results of FP32 Model")
+
+### INT8
+
+![Benchmark results of INT8 Model](media/int8_benchmark.png "Benchmark results of INT8 Model")
 
 ## Results
 *TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
