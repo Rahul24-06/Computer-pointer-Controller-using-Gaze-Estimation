@@ -77,7 +77,7 @@ cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer
 
 This shows the directory structure of the project. The project directory contains the folders model, images, src which has the following files. 
 
-* *images*: Contains all the media files used for the README.md.
+* *images*: Contains all the image files used for the README.md.
 
 * *model* : Contains the pre-trained model needed for the project. 
   * Face Detection model
@@ -99,6 +99,15 @@ This shows the directory structure of the project. The project directory contain
 
 ## Documentation
 
+### How it Works
+
+You will have to coordinate the flow of data from the input, and then amongst the different models and finally to the mouse controller. The flow of data will look like this:
+
+![Pipeline](images/pipeline.png "Pipeline")
+
+Diagram showing the flow of data from the input, through the different models, to the mouse controller. 
+While building the flow, you will need to make sure that you are aware of the input and output shapes of each model. If the shapes or data format are different for a particular model, you can account for this in the preprocessing methods (will go over this in more detail shortly).
+
 ### Pre-Trained Model Documentation
 
 * [Face Detection Model](https://docs.openvinotoolkit.org/latest/_models_intel_face_detection_adas_binary_0001_description_face_detection_adas_binary_0001.html)
@@ -116,15 +125,15 @@ The benchmark results of running your model on multiple hardwares and multiple m
 
 ### FP16
 
-![Benchmark results of FP16 Model](media/fp16_benchmark.png "Benchmark results of FP16 Model")
+![Benchmark results of FP16 Model](images/fp16_benchmark.png "Benchmark results of FP16 Model")
 
 ### FP32
 
-![Benchmark results of FP32 Model](media/fp32_benchmark.png "Benchmark results of FP32 Model")
+![Benchmark results of FP32 Model](images/fp32_benchmark.png "Benchmark results of FP32 Model")
 
 ### INT8
 
-![Benchmark results of INT8 Model](media/int8_benchmark.png "Benchmark results of INT8 Model")
+![Benchmark results of INT8 Model](images/int8_benchmark.png "Benchmark results of INT8 Model")
 
 ## Results
 *TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
