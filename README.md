@@ -9,9 +9,8 @@ In this project, we will use a gaze detection model to control the mouse pointer
 ---
 
 ## Project Set Up and Installation
-*TODO:* Explain the setup procedures to run your project. For instance, this can include your project directory structure, the models you need to download and where to place them etc. Also include details about how to install the dependencies your project requires.
 
-### Step 1: Ground work
+### Step 1: Ground work - Dependencies
 
 - Firstly, we install the prerequisites from requirements.txt using the following command.
 
@@ -37,6 +36,63 @@ I've made a step by step instruction walkthrough to install Intel® Distribution
 
 [![OpenVINO installation Video](./images/openvino.png)](https://youtu.be/fCo05FwH0oM "OpenVINO installation Video - Click to Watch!")
 
+### Step 3: Downloading the pre-trained models
+
+- Go to the Model Downloader directory: 
+
+```
+cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\install_prerequisites
+
+```
+
+1. Download Face Detection Model
+
+```
+
+```
+
+1. Download Facial Landmarks Detection Model
+
+```
+
+```
+
+1. Download Head Pose Estimation Model
+
+```
+
+```
+
+1. Download Gaze Estimation Model
+
+```
+
+```
+      
+- Copy the downloaded models to the Project directory. (Note that I've downloaded models wih FP16 precision)
+
+###  Project Directory Structure
+
+![directory-structure](./images/dir.png)
+
+This shows the directory structure of the project. The project directory contains the folders model, images, src which has the following files. 
+
+* images: Contains all the media files used for the README.md.
+
+* model : Contains the pre-trained model needed for the project. 
+  * Face Detection model
+  * Head Pose Estimation model
+  * Facial Landmarks Detection model
+  * Gaze Estimation model
+
+* src
+  * face_detection.py - Contains Class with function to load the model, pre-process the input frame, perform inference to detect the face, and pre-process the output. 
+  * facial_landmarks_detection.py - Contains Class with function to load the model, pre-process the faces from input frame, perform inference to detect the landmarks for eye, and pre-process the output.
+  * head_pose_estimation.py -  Contains Class with function to load the model, pre-process the faces from input frame, perform inference to detect the head postion using the angles of yaw, pitch, and roll, and pre-process the output.
+  * gaze_estimation.py - Contains Class with function to load the model, pre-process the left eye, right eye and the head pose angle from input frame, perform inference to predict the gaze vector, and pre-process the output.
+  * input_feeder.py - Contains InputFeeder class to initialize VideoCapture with either 'CAM' or video_file and return the frames sequentially
+  * mouse_controller.py - Contains sample class that you can use to control the mouse pointer.
+  
 ## Demo
 *TODO:* Explain how to run a basic demo of your model.
 
