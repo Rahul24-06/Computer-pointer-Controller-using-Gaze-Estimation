@@ -27,7 +27,7 @@ git clone https://github.com/Rahul24-06/Computer-pointer-Controller-using-Gaze-E
 - Initialize the OpenVINO environment 
 
 ```
-cd <OppenVINO-Path>\IntelSWTools\openvino\bin\
+cd <OpenVINO-Path>\IntelSWTools\openvino\bin\
 setupvars.bat
 ```
 
@@ -107,7 +107,7 @@ This shows the directory structure of the project. The project directory contain
 1. Initialize the OpenVINO environment 
 
 ```
-cd <OppenVINO-Path>\IntelSWTools\openvino\bin\
+cd <OpenVINO-Path>\IntelSWTools\openvino\bin\
 setupvars.bat
 ```
 
