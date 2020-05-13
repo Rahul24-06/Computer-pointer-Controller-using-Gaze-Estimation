@@ -119,14 +119,9 @@ cd <Project-Repo-Path>\src
 3. Run the main.py 
 
 ```
-python main.py 
--f "Path to an .xml file with Face Detection model>"
--fl "Path to an .xml file with Facial Landmark Detection model"
--hp "Path to an .xml file with Head Pose Estimation model".
--g "Path to an .xml file with Gaze Estimation model"
--i "Path to image or video file or CAM"
--d "Target device"
+python main.py -f "Face Detection model  .xml file" -fl "Facial Landmark Detection model .xml file" -hp "Head Pose Estimation model .xml file" -g "Gaze Estimation model .xml file" -i "video file" or "CAM" -d "Target device"
 ```
+"CPU" is the default Target device. Other devices such as "GPU", "MYRIAD", and "FPGA" is passsed based on the deployed device.
 
 ## Documentation
 
@@ -178,13 +173,26 @@ The benchmark results of running your model on multiple hardwares and multiple m
 ## Results
 *TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
 
-## Stand Out Suggestions
-This is where you can provide information about the stand out suggestions that you have attempted.
+The Inference is done on four different devices. 
+1. Intel Core i5-6500TE CPU
+2. Intel Core i5-6500TE GPU
+3. IEI Mustang F100-A10 FPGA 
+4. Intel Neural Compute Stick 2 
 
-### Async Inference
-If you have used Async Inference in your code, benchmark the results and explain its effects on power and performance of your project.
+From the benchmarking, the inference time, model load time and the frames per seconds (FPS) are given. 
+
+* 
+
+*  
+
+* 
+
+## Stand Out Suggestions
+
+* The video feed can be either a video_file or directly from the Camera out. i.e Inference pipeline for both video file and webcam feed as allowed as input. It can be configured in the command line argument *-i "Video_file" or -i "CAM"* 
 
 ### Edge Cases
+
 There will be certain situations that will break your inference flow. For instance, lighting changes or multiple people in the frame. Explain some of the edge cases you encountered in your project and how you solved them to make your project more robust.
 
 *If you faced any issues in building this project, feel free to ask me. Please do suggest new projects that you want me to do next.*
