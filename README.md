@@ -38,32 +38,32 @@ I've made a step by step instruction walkthrough to install Intel® Distribution
 
 ### Step 3: Downloading the pre-trained models
 
-- Go to the Model Downloader directory: 
+- Go to the *Model Downloader* directory: 
 
 ```
 cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\install_prerequisites
 
 ```
 
-1. Download Face Detection Model
+**1. Download Face Detection Model**
 
 ```
 
 ```
 
-1. Download Facial Landmarks Detection Model
+**2. Download Facial Landmarks Detection Model**
 
 ```
 
 ```
 
-1. Download Head Pose Estimation Model
+**3. Download Head Pose Estimation Model**
 
 ```
 
 ```
 
-1. Download Gaze Estimation Model
+**4. Download Gaze Estimation Model**
 
 ```
 
@@ -77,15 +77,15 @@ cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer
 
 This shows the directory structure of the project. The project directory contains the folders model, images, src which has the following files. 
 
-* images: Contains all the media files used for the README.md.
+* *images*: Contains all the media files used for the README.md.
 
-* model : Contains the pre-trained model needed for the project. 
+* *model* : Contains the pre-trained model needed for the project. 
   * Face Detection model
   * Head Pose Estimation model
   * Facial Landmarks Detection model
   * Gaze Estimation model
 
-* src
+* *src* : Contains the python script used in this project
   * face_detection.py - Contains Class with function to load the model, pre-process the input frame, perform inference to detect the face, and pre-process the output. 
   * facial_landmarks_detection.py - Contains Class with function to load the model, pre-process the faces from input frame, perform inference to detect the landmarks for eye, and pre-process the output.
   * head_pose_estimation.py -  Contains Class with function to load the model, pre-process the faces from input frame, perform inference to detect the head postion using the angles of yaw, pitch, and roll, and pre-process the output.
