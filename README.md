@@ -24,6 +24,13 @@ pip install -r requirements.txt
 git clone https://github.com/Rahul24-06/Computer-pointer-Controller-using-Gaze-Estimation
 ```
 
+- Initialize the OpenVINO environment 
+
+```
+cd <Project-Repo-Path>\IntelSWTools\openvino\bin\
+setupvars.bat
+```
+
 ### Step 2: Install Intel® Distribution of OpenVINO™ toolkit
 
 Utilize the classroom workspace, or refer to the relevant instructions for your operating system for this step.
@@ -41,34 +48,35 @@ I've made a step by step instruction walkthrough to install Intel® Distribution
 - Go to the *Model Downloader* directory: 
 
 ```
-cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\install_prerequisites
-
+cd <Project-Repo-Path>\IntelSWTools\openvino\deployment_tools\tools\model_downloader
 ```
 
 **1. Download Face Detection Model**
 
 ```
-
+python downloader.py --name face-detection-adas-binary-0001
 ```
 
 **2. Download Facial Landmarks Detection Model**
 
 ```
-
+python downloader.py --name landmarks-regression-retail-0009
 ```
 
 **3. Download Head Pose Estimation Model**
 
 ```
-
+python downloader.py --name head-pose-estimation-adas-0001
 ```
 
 **4. Download Gaze Estimation Model**
 
 ```
-
+python downloader.py --name gaze-estimation-adas-0002
 ```
-      
+
+![Model Downloader](./images/model-download.png)
+
 - Copy the downloaded models to the Project directory. (Note that I've downloaded models wih FP16 precision)
 
 ###  Project Directory Structure
