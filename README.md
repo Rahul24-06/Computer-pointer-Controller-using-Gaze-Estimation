@@ -152,7 +152,7 @@ The *main.py* file is fed with the following arguments in the command line infer
 * -i "Path to image or video file or CAM"
 * -d "Target device"
 
---------------------------------------------------------------------------------------------------------
+---
 
 ## Benchmarks
 
@@ -171,7 +171,6 @@ The benchmark results of running your model on multiple hardwares and multiple m
 ![Benchmark results of INT8 Model](images/int8_benchmark.png "Benchmark results of INT8 Model")
 
 ## Results
-*TODO:* Discuss the benchmark results and explain why you are getting the results you are getting. For instance, explain why there is difference in inference time for FP32, FP16 and INT8 models.
 
 The Inference is done on four different devices. 
 1. Intel Core i5-6500TE CPU
@@ -181,21 +180,26 @@ The Inference is done on four different devices.
 
 From the benchmarking, the inference time, model load time and the frames per seconds (FPS) are given. 
 
-* 
-
-*  
-
-* 
+* The Model takes more time to load in FPGA than the CPU and VPU, but the other parameters are taken in consideration. 
+  * FPGA has high performance and low latency which makes it apt for this scenario.
+  * FPGA are designed to run 24/7, 365 days. and can handle large networks
+  * FPGA are field programmable and has high flexibility. i.e., They can be re-programmed even after deployment. 
+  * FPGA has long lifespan. It can easily last for 10 years.
+ 
+* The FPS processed by the GPU is higher than the other devices, specially when moderl with FP16 precision is used. 
+* Changing the model precision has a effect in the model accuracy. Model size can be reduced to lowering the precision from FP32 to FP16 or INT8, thus makes the inference rate faster. Note that, reducing the model precision might lose some of the important information used for training which  decreases themodel accuracy. 
 
 ## Stand Out Suggestions
 
-* The video feed can be either a video_file or directly from the Camera out. i.e Inference pipeline for both video file and webcam feed as allowed as input. It can be configured in the command line argument *-i "Video_file" or -i "CAM"* 
+* The video feed can be either a video_file or directly from the camera feed. i.e Inference pipeline for both video file and webcam feed as allowed as input. It can be configured in the command line argument *-i "Video_file" or -i "CAM"* 
 
 ### Edge Cases
 
 * There will be certain situations that will break your inference flow. For instance, lighting changes or multiple people in the frame. In that cases, if the face is not detected, the error message is logged and collects the next frame and closes the window, to make the project more robust.
 
-* If multiple faces are detected for any given frame, the model is fed with the first face detected to control the mouse pointer. 
+---
+
+* If multiple faces are detected for any given frame, the model is fed with the first detected face to control the mouse pointer. 
 
 *If you faced any issues in building this project, feel free to ask me. Please do suggest new projects that you want me to do next.*
 
