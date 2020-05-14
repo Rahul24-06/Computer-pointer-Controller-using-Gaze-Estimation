@@ -2,7 +2,7 @@
 
 In this project, we will use a gaze detection model to control the mouse pointer of your computer. I'll be using the Gaze Estimation model to estimate the gaze of the user's eyes and change the mouse pointer position accordingly. This project will demonstrate the ability to run multiple models in the same machine and coordinate the flow of data between those models.
 
-## Demo Video of the Project - Using Video as source  link
+## Demo Video of the Project - Using Video as source  link - Updated soon
 
 [![Working Video](./images/demo1.png)](link "Working of the Project - Click to Watch!")
 
@@ -186,8 +186,10 @@ From the benchmarking, the inference time, model load time and the frames per se
   * FPGA are field programmable and has high flexibility. i.e., They can be re-programmed even after deployment. 
   * FPGA has long lifespan. It can easily last for 10 years.
  
-* The FPS processed by the GPU is higher than the other devices, specially when moderl with FP16 precision is used. 
-* Changing the model precision has a effect in the model accuracy. Model size can be reduced to lowering the precision from FP32 to FP16 or INT8, thus makes the inference rate faster. Note that, reducing the model precision might lose some of the important information used for training which  decreases themodel accuracy. 
+* The FPS processed by the GPU is higher than the other devices, specially when model with FP16 precision is used. 
+* Changing the model precision has a effect in the model accuracy. Model size can be reduced to lowering the precision from FP32 to FP16 or INT8, thus makes the inference rate faster. 
+
+**Note that, reducing the model precision might lose some of the important information used for training which  decreases themodel accuracy. 
 
 ## Stand Out Suggestions
 
