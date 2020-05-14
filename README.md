@@ -197,9 +197,9 @@ From the benchmarking, the inference time, model load time and the frames per se
 
 * There will be certain situations that will break your inference flow. For instance, lighting changes or multiple people in the frame. In that cases, if the face is not detected, the error message is logged and collects the next frame and closes the window, to make the project more robust.
 
----
-
 * If multiple faces are detected for any given frame, the model is fed with the first detected face to control the mouse pointer. 
+
+---
 
 *If you faced any issues in building this project, feel free to ask me. Please do suggest new projects that you want me to do next.*
 
