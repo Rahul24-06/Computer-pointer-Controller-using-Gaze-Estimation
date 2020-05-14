@@ -177,7 +177,7 @@ The Inference is done on four different devices.
 1. Intel Core i5-6500TE CPU
 2. Intel Core i5-6500TE GPU
 3. IEI Mustang F100-A10 FPGA 
-4. Intel Neural Compute Stick 2 
+4. Intel Neural Compute Stick 2 VPU
 
 From the benchmarking, the inference time, model load time and the frames per seconds (FPS) are given. 
 
@@ -193,7 +193,9 @@ From the benchmarking, the inference time, model load time and the frames per se
 
 ### Edge Cases
 
-There will be certain situations that will break your inference flow. For instance, lighting changes or multiple people in the frame. Explain some of the edge cases you encountered in your project and how you solved them to make your project more robust.
+* There will be certain situations that will break your inference flow. For instance, lighting changes or multiple people in the frame. In that cases, if the face is not detected, the error message is logged and collects the next frame and closes the window, to make the project more robust.
+
+* If multiple faces are detected for any given frame, the model is fed with the first face detected to control the mouse pointer. 
 
 *If you faced any issues in building this project, feel free to ask me. Please do suggest new projects that you want me to do next.*
 
