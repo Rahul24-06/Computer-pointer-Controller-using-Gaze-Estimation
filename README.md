@@ -2,9 +2,9 @@
 
 In this project, we will use a gaze detection model to control the mouse pointer of your computer. I'll be using the Gaze Estimation model to estimate the gaze of the user's eyes and change the mouse pointer position accordingly. This project will demonstrate the ability to run multiple models in the same machine and coordinate the flow of data between those models.
 
-## Demo Video of the Project - Using Video as source  link - Updated soon
+## Demo Video of the Project - https://youtu.be/DzJLhYhbgII
 
-[![Working Video](./images/demo1.png)](link "Working of the Project - Click to Watch!")
+[![Working Video](./images/youtube.png)](https://youtu.be/DzJLhYhbgII "Working of the Project - Click to Watch!")
 
 ---
 
