@@ -207,7 +207,7 @@ From the benchmarking, the inference time, model load time and the frames per se
 
 *Share this video if you like.*
 
-*Blog - https://rahulthelonelyprogrammer.blogspot.in/*
+*Blog - https://rahulthelonelyprogrammer.blogspot.com/*
 
 *Github - https://github.com/Rahul24-06*
 
